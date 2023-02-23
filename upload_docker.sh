@@ -5,11 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=nicksyrop/flaskmlproject
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login -u nicksyrop
+docker tag flaskmlproject $dockerpath:latest
 
 # Step 3:
 # Push image to a docker repository
+docker push nicksyrop/flaskmlproject
