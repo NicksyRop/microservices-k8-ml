@@ -1,1 +1,19 @@
-<paste log output from Kubernetes-mediated prediction, here>
+
+(.devops) root@ip-172-31-95-224:~/microservices-k8-ml# ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "skylearn-ml-api" already exists
+NAME              READY   STATUS    RESTARTS        AGE
+skylearn-ml-api   1/1     Running   1 (5m41s ago)   25m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+
+
+
+(.devops) root@ip-172-31-95-224:~/microservices-k8-ml# ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
